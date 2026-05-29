@@ -1,3 +1,5 @@
+chatgpt / [Exports](modules.md)
+
 # ChatGPT API <!-- omit in toc -->
 
 > Node.js client for the official [ChatGPT](https://openai.com/blog/chatgpt/) API.
@@ -389,7 +391,7 @@ To use `ChatGPTUnofficialProxyAPI`, you'll need an OpenAI access token from the 
   - [ericlewis/openai-authenticator](https://github.com/ericlewis/openai-authenticator)
   - [michael-dm/openai-token](https://github.com/michael-dm/openai-token)
   - [allanoricil/chat-gpt-authenticator](https://github.com/AllanOricil/chat-gpt-authenticator)
-- Go libs
+- Python libs
   - [acheong08/OpenAIAuth](https://github.com/acheong08/OpenAIAuth)
 
 These libraries work with email + password accounts (e.g., they do not support accounts where you auth via Microsoft / Google).
@@ -491,7 +493,6 @@ All of these awesome projects are built using the `chatgpt` package. 🤯
 - [QQ Bot (oicq)](https://github.com/easydu2002/chat_gpt_oicq)
 - [QQ Bot (oicq + RabbitMQ)](https://github.com/linsyking/ChatGPT-QQBot)
 - [QQ Bot (go-cqhttp)](https://github.com/PairZhu/ChatGPT-QQRobot)
-- [QQ Bot (plugin for Yunzai-Bot + Bull)](https://github.com/Micuks/chatGPT-yunzai) (Lightweight, Google Bard support 💪)
 - [EXM smart contracts](https://github.com/decentldotland/molecule)
 - [Flutter ChatGPT API](https://github.com/coskuncay/flutter_chatgpt_api)
 - [Carik Bot](https://github.com/luridarmawan/Carik)
@@ -538,8 +539,6 @@ All of these awesome projects are built using the `chatgpt` package. 🤯
 - [Julius GPT](https://github.com/christophebe/julius-gpt) - Generate and publish your content from the CLI
 - [OpenAI-API-Service](https://github.com/Jarvan-via/api-service) - Provides OpenAI related APIs for businesses
 - [Discord Daily News Bot](https://github.com/ZirionNeft/chatgpt-discord-daily-news-bot) - Discord bot that generate funny daily news
-- [ai-assistant](https://github.com/chenweiyi/ai-assistant) - Create a chat website similar to ChatGPT
-- [Tulsk – AI-Driven Project Management](https://tulsk.io)
 
 If you create a cool integration, feel free to open a PR and add it to the list.
 
