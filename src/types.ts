@@ -343,6 +343,7 @@ export namespace openai {
      * @memberof CreateChatCompletionRequest
      */
     user?: string
+    reasoning_effort?: string
   }
   /**
    * @type CreateChatCompletionRequestStop

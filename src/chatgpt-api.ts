@@ -188,11 +188,28 @@ export class ChatGPTAPI {
           Authorization: `Bearer ${this._apiKey}`
         }
         const body = {
-          max_tokens: maxTokens,
+          max_completion_tokens: maxTokens,
           ...this._completionParams,
           ...completionParams,
           messages,
           stream
+        }
+
+        if (this._completionParams?.model === 'gpt-6-luna') {
+          // Start with reasoning disabled for a simpler migration.
+          // Callers can explicitly choose another effort.
+          body.reasoning_effort =
+            this._completionParams?.reasoning_effort ?? 'none'
+
+          if (body.reasoning_effort !== 'none') {
+            delete body.temperature
+            delete body.top_p
+            // delete body.logprobs;
+            // delete body.top_logprobs;
+          }
+        } else if (this._completionParams?.model === 'gpt-4o') {
+          // Don't pass Luna's reasoning setting to GPT-4o.
+          delete body.reasoning_effort
         }
 
         // Support multiple organizations
@@ -429,7 +446,8 @@ export class ChatGPTAPI {
         break
       } else if (
         this._completionParams?.model !== 'gpt-4-vision-preview' &&
-        this._completionParams?.model !== 'gpt-4o'
+        this._completionParams?.model !== 'gpt-4o' &&
+        this._completionParams?.model !== 'gpt-6-luna'
       ) {
         const parentText = parentMessage.text
         if (Array.isArray(parentText)) {
