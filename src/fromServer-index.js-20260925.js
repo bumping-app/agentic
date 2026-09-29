@@ -144,9 +144,9 @@ var ChatGPTAPI = class {
     this._fetch = fetch2;
     this._completionParams = {
       model: CHATGPT_MODEL,
-      temperature: 0.8,
+      // temperature: 0.8,
       top_p: 1,
-      presence_penalty: 1,
+      // presence_penalty: 1,
       ...completionParams
     };
     this._systemMessage = systemMessage;
@@ -243,7 +243,7 @@ Current date: ${currentDate}`;
           Authorization: `Bearer ${this._apiKey}`
         };
         const body = {
-          max_tokens: maxTokens,
+          max_completion_tokens: maxTokens,
           ...this._completionParams,
           ...completionParams,
           messages,

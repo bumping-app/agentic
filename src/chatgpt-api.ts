@@ -73,9 +73,9 @@ export class ChatGPTAPI {
 
     this._completionParams = {
       model: CHATGPT_MODEL,
-      temperature: 0.8,
+      // temperature: 0.8,
       top_p: 1.0,
-      presence_penalty: 1.0,
+      // presence_penalty: 1.0,
       ...completionParams
     }
 
@@ -203,7 +203,8 @@ export class ChatGPTAPI {
 
           if (body.reasoning_effort !== 'none') {
             delete body.temperature
-            delete body.top_p
+            delete body.presence_penalty
+            // elete body.top_p
             // delete body.logprobs;
             // delete body.top_logprobs;
           }
